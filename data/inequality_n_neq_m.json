@@ -1,0 +1,105 @@
+{
+  "name": "a^n b^m (n != m)",
+  "states": [
+    "q0",
+    "q_check",
+    "q_more_a",
+    "q_equal",
+    "q_more_b"
+  ],
+  "input_alphabet": [
+    "a",
+    "b"
+  ],
+  "stack_alphabet": [
+    "Z0",
+    "A"
+  ],
+  "initial_state": "q0",
+  "initial_stack_symbol": "Z0",
+  "final_states": [
+    "q_more_a",
+    "q_more_b"
+  ],
+  "transitions": [
+    {
+      "from_state": "q0",
+      "input_symbol": "a",
+      "stack_top": "Z0",
+      "to_state": "q0",
+      "push_symbols": [
+        "A",
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "a",
+      "stack_top": "A",
+      "to_state": "q0",
+      "push_symbols": [
+        "A",
+        "A"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "b",
+      "stack_top": "Z0",
+      "to_state": "q_more_b",
+      "push_symbols": [
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "b",
+      "stack_top": "A",
+      "to_state": "q_check",
+      "push_symbols": []
+    },
+    {
+      "from_state": "q_check",
+      "input_symbol": "\u03b5",
+      "stack_top": "A",
+      "to_state": "q_more_a",
+      "push_symbols": [
+        "A"
+      ]
+    },
+    {
+      "from_state": "q_check",
+      "input_symbol": "\u03b5",
+      "stack_top": "Z0",
+      "to_state": "q_equal",
+      "push_symbols": [
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q_more_a",
+      "input_symbol": "b",
+      "stack_top": "A",
+      "to_state": "q_check",
+      "push_symbols": []
+    },
+    {
+      "from_state": "q_equal",
+      "input_symbol": "b",
+      "stack_top": "Z0",
+      "to_state": "q_more_b",
+      "push_symbols": [
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q_more_b",
+      "input_symbol": "b",
+      "stack_top": "Z0",
+      "to_state": "q_more_b",
+      "push_symbols": [
+        "Z0"
+      ]
+    }
+  ]
+}

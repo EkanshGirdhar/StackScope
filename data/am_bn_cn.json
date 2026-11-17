@@ -1,0 +1,77 @@
+{
+  "name": "a^m b^n c^n (m,n >= 1)",
+  "states": [
+    "q0",
+    "q1",
+    "q2",
+    "q3"
+  ],
+  "input_alphabet": [
+    "a",
+    "b",
+    "c"
+  ],
+  "stack_alphabet": [
+    "Z0",
+    "B"
+  ],
+  "initial_state": "q0",
+  "initial_stack_symbol": "Z0",
+  "final_states": [
+    "q3"
+  ],
+  "transitions": [
+    {
+      "from_state": "q0",
+      "input_symbol": "a",
+      "stack_top": "Z0",
+      "to_state": "q0",
+      "push_symbols": [
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "b",
+      "stack_top": "Z0",
+      "to_state": "q1",
+      "push_symbols": [
+        "B",
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "b",
+      "stack_top": "B",
+      "to_state": "q1",
+      "push_symbols": [
+        "B",
+        "B"
+      ]
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "c",
+      "stack_top": "B",
+      "to_state": "q2",
+      "push_symbols": []
+    },
+    {
+      "from_state": "q2",
+      "input_symbol": "c",
+      "stack_top": "B",
+      "to_state": "q2",
+      "push_symbols": []
+    },
+    {
+      "from_state": "q2",
+      "input_symbol": "\u03b5",
+      "stack_top": "Z0",
+      "to_state": "q3",
+      "push_symbols": [
+        "Z0"
+      ]
+    }
+  ]
+}

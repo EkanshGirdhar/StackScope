@@ -1,0 +1,108 @@
+{
+  "name": "Mixed Brackets () and []",
+  "states": [
+    "q0",
+    "q1"
+  ],
+  "input_alphabet": [
+    "(",
+    ")",
+    "[",
+    "]"
+  ],
+  "stack_alphabet": [
+    "Z0",
+    "P",
+    "B"
+  ],
+  "initial_state": "q0",
+  "initial_stack_symbol": "Z0",
+  "final_states": [
+    "q0"
+  ],
+  "transitions": [
+    {
+      "from_state": "q0",
+      "input_symbol": "(",
+      "stack_top": "Z0",
+      "to_state": "q1",
+      "push_symbols": [
+        "P",
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "[",
+      "stack_top": "Z0",
+      "to_state": "q1",
+      "push_symbols": [
+        "B",
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "(",
+      "stack_top": "P",
+      "to_state": "q1",
+      "push_symbols": [
+        "P",
+        "P"
+      ]
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "[",
+      "stack_top": "P",
+      "to_state": "q1",
+      "push_symbols": [
+        "B",
+        "P"
+      ]
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "(",
+      "stack_top": "B",
+      "to_state": "q1",
+      "push_symbols": [
+        "P",
+        "B"
+      ]
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "[",
+      "stack_top": "B",
+      "to_state": "q1",
+      "push_symbols": [
+        "B",
+        "B"
+      ]
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": ")",
+      "stack_top": "P",
+      "to_state": "q1",
+      "push_symbols": []
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "]",
+      "stack_top": "B",
+      "to_state": "q1",
+      "push_symbols": []
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "\u03b5",
+      "stack_top": "Z0",
+      "to_state": "q0",
+      "push_symbols": [
+        "Z0"
+      ]
+    }
+  ]
+}

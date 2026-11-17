@@ -1,0 +1,135 @@
+{
+  "name": "w c w^R (over {a, b})",
+  "states": [
+    "q0",
+    "q1",
+    "q2"
+  ],
+  "input_alphabet": [
+    "a",
+    "b",
+    "c"
+  ],
+  "stack_alphabet": [
+    "Z0",
+    "A",
+    "B"
+  ],
+  "initial_state": "q0",
+  "initial_stack_symbol": "Z0",
+  "final_states": [
+    "q2"
+  ],
+  "transitions": [
+    {
+      "from_state": "q0",
+      "input_symbol": "a",
+      "stack_top": "Z0",
+      "to_state": "q0",
+      "push_symbols": [
+        "A",
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "b",
+      "stack_top": "Z0",
+      "to_state": "q0",
+      "push_symbols": [
+        "B",
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "a",
+      "stack_top": "A",
+      "to_state": "q0",
+      "push_symbols": [
+        "A",
+        "A"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "b",
+      "stack_top": "A",
+      "to_state": "q0",
+      "push_symbols": [
+        "B",
+        "A"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "a",
+      "stack_top": "B",
+      "to_state": "q0",
+      "push_symbols": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "b",
+      "stack_top": "B",
+      "to_state": "q0",
+      "push_symbols": [
+        "B",
+        "B"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "c",
+      "stack_top": "Z0",
+      "to_state": "q1",
+      "push_symbols": [
+        "Z0"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "c",
+      "stack_top": "A",
+      "to_state": "q1",
+      "push_symbols": [
+        "A"
+      ]
+    },
+    {
+      "from_state": "q0",
+      "input_symbol": "c",
+      "stack_top": "B",
+      "to_state": "q1",
+      "push_symbols": [
+        "B"
+      ]
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "a",
+      "stack_top": "A",
+      "to_state": "q1",
+      "push_symbols": []
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "b",
+      "stack_top": "B",
+      "to_state": "q1",
+      "push_symbols": []
+    },
+    {
+      "from_state": "q1",
+      "input_symbol": "\u03b5",
+      "stack_top": "Z0",
+      "to_state": "q2",
+      "push_symbols": [
+        "Z0"
+      ]
+    }
+  ]
+}
