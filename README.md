@@ -2,7 +2,7 @@
 
 StackScope is a web-based educational tool built for students to understand and visualize the inner workings of **Deterministic Pushdown Automata (DPDA)**.
 
-## Project Structure
+# Project Structure
 
 ```text
 TOC Project/
